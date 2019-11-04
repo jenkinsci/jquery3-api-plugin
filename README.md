@@ -9,3 +9,24 @@
 Provides [JQuery 3](https://jquery.com) for Jenkins Plugins.
 
 This plugin contains the latest [WebJars](https://www.webjars.org) release and corresponding Jenkins UI elements. 
+
+## How to use the plugin
+
+In order to use this JS library, add a maven dependency to your pom:
+```xml
+    <dependency>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>jquery3-api</artifactId>
+      <version>[latest version]</version>
+    </dependency>
+```
+
+Then you can use JQuery in your jelly files using the following snippet:
+
+```xml
+      <st:adjunct includes="io.jenkins.plugins.jquery3"/>
+```
+ 
+You can find several examples of Jenkins views that use JQuery in the 
+[Warnings Next Generation plugin](https://github.com/jenkinsci/warnings-ng-plugin).
+
