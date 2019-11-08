@@ -21,9 +21,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uhafner/jquery3-api-plugin.git"
+    "url": "git+https://github.com/jenkins/jquery3-api-plugin.git"
   },
   "author": "Ullrich Hafner",
   "license": "MIT",
-  "homepage": "https://github.com/uhafner/jquery3-api-plugin#readme"
+  "homepage": "https://github.com/jenkins/jquery3-api-plugin#readme"
 }
