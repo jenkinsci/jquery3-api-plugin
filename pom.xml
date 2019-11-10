@@ -13,7 +13,7 @@
   <groupId>io.jenkins.plugins</groupId>
   <packaging>hpi</packaging>
   <name>JQuery3 API Plugin</name>
-  <version>3.4.1-1-SNAPSHOT</version>
+  <version>3.4.1-1-beta1-SNAPSHOT</version>
   <description>Jenkins plug-in that provides JQuery 3.x.</description>
 
   <properties>
