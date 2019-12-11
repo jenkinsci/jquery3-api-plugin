@@ -7,7 +7,6 @@ Use it like <st:adjunct includes="io.jenkins.plugins.jquery3"/>
   <j:new var="h" className="hudson.Functions" />
   ${h.initPageVariables(context)}
 
-  <script type="text/javascript" src="${rootURL}/plugin/jquery3-api/webjars/jquery.min.js"/>
   <script type="text/javascript" src="${resURL}/plugin/jquery3-api/webjars/jquery.min.js"/>
   <script type="text/javascript" src="${resURL}/plugin/jquery3-api/plugins/visible.js"/>
   <script type="text/javascript" src="${resURL}/plugin/jquery3-api/plugins/no-prototype.js"/>
