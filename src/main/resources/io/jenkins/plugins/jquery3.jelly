@@ -12,6 +12,7 @@ Use it like <st:adjunct includes="io.jenkins.plugins.jquery3"/>
 
   <script>
     const jQuery3 = $;
+    jQuery3.noConflict();
   </script>
 
 </j:jelly>
