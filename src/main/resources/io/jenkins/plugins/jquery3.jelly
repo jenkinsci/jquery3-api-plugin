@@ -9,6 +9,9 @@ Use it like <st:adjunct includes="io.jenkins.plugins.jquery3"/>
 
   <script type="text/javascript" src="${resURL}/plugin/jquery3-api/webjars/jquery.min.js"/>
   <script type="text/javascript" src="${resURL}/plugin/jquery3-api/plugins/visible.js"/>
-  <script type="text/javascript" src="${resURL}/plugin/jquery3-api/plugins/no-prototype.js"/>
+
+  <script>
+    const jQuery3 = $;
+  </script>
 
 </j:jelly>
