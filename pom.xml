@@ -13,7 +13,7 @@
   <packaging>hpi</packaging>
   <name>JQuery3 API Plugin</name>
   <version>${revision}${changelist}</version>
-  <description>Jenkins plug-in that provides JQuery 3.x.</description>
+  <description>Jenkins plug-in that provides jQuery 3.x.</description>
   <url>https://github.com/jenkinsci/jquery3-api-plugin</url>
 
   <properties>

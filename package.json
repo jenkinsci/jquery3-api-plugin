@@ -1,7 +1,7 @@
 {
   "name": "jquery3",
   "version": "0.1.0",
-  "description": "JQuery 3 Jenkins Plugin",
+  "description": "jQuery 3 Jenkins Plugin",
   "directories": {
     "doc": "doc"
   },
