@@ -2,10 +2,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.jenkins-ci.plugins</groupId>
-    <artifactId>plugin</artifactId>
-    <version>3.55</version>
-    <relativePath />
+    <groupId>org.jvnet.hudson.plugins</groupId>
+    <artifactId>analysis-pom</artifactId>
+    <version>2.0.0-beta-2</version>
+    <relativePath/>
   </parent>
 
   <artifactId>jquery3-api</artifactId>
@@ -13,6 +13,7 @@
   <packaging>hpi</packaging>
   <name>JQuery3 API Plugin</name>
   <version>${revision}${changelist}</version>
+
   <description>Jenkins plug-in that provides jQuery 3.x.</description>
   <url>https://github.com/jenkinsci/jquery3-api-plugin</url>
 
@@ -21,28 +22,7 @@
     <changelist>-SNAPSHOT</changelist>
     <jquery.version>3.4.1</jquery.version>
 
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jenkins.version>2.138.4</jenkins.version>
-    <java.level>8</java.level>
-    <jenkins-test-harness.version>2.59</jenkins-test-harness.version>
-    <spotbugs.failOnError>false</spotbugs.failOnError>
-    <slf4j.version>1.7.30</slf4j.version>
-    <codingstyle.version>0.3.2</codingstyle.version>
-
     <module.name>${project.groupId}.jquery3</module.name>
-
-    <!-- Library Dependencies Versions -->
-    <error-prone.version>2.3.3</error-prone.version>
-
-    <!-- Maven plug-in versions -->
-    <maven-failsafe.plugin>3.0.0-M4</maven-failsafe.plugin>
-    <jar.maven.plugin>3.0.2</jar.maven.plugin>
-    <animal-sniffer-maven-plugin.version>1.18</animal-sniffer-maven-plugin.version>
-    <maven-hpi-plugin.version>2.5</maven-hpi-plugin.version>
-    <maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>
-    <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
-    <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
-    <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
   </properties>
 
   <licenses>
@@ -75,7 +55,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>${maven-dependency-plugin.version}</version>
         <executions>
           <execution>
             <id>unpack-dependencies</id>
@@ -91,8 +70,8 @@
         </executions>
       </plugin>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
-        <version>${maven-resources-plugin.version}</version>
         <executions>
           <execution>
             <id>copy-resources</id>
@@ -104,7 +83,9 @@
               <outputDirectory>${project.build.directory}/${project.artifactId}/webjars</outputDirectory>
               <resources>
                 <resource>
-                  <directory>${project.build.directory}/webjars/META-INF/resources/webjars/jquery/${jquery.version}</directory>
+                  <directory>
+                    ${project.build.directory}/webjars/META-INF/resources/webjars/jquery/${jquery.version}
+                  </directory>
                   <filtering>false</filtering>
                 </resource>
               </resources>
@@ -112,51 +93,7 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>${maven-jar-plugin.version}</version>
-        <configuration>
-          <archive>
-            <manifestEntries>
-              <Built-By>Ullrich Hafner</Built-By>
-              <Url>${project.scm.url}</Url>
-              <Jenkins-ClassFilter-Whitelisted>true</Jenkins-ClassFilter-Whitelisted>
-              <Automatic-Module-Name>${module.name}</Automatic-Module-Name>
-            </manifestEntries>
-          </archive>
-        </configuration>
-      </plugin>
     </plugins>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>animal-sniffer-maven-plugin</artifactId>
-          <version>${animal-sniffer-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-enforcer-plugin</artifactId>
-          <executions>
-            <execution>
-              <id>display-info</id>
-              <configuration>
-                <rules>
-                  <enforceBytecodeVersion>
-                    <ignoreClasses>
-                      <!-- asm dependency from PMD contains a java9 module-info.class -->
-                      <ignoreClass>module-info</ignoreClass>
-                      <!-- Junit >= 5.3 contains some java9 classes -->
-                      <ignoreClass>**/ModuleUtils*</ignoreClass>
-                    </ignoreClasses>
-                  </enforceBytecodeVersion>
-                </rules>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
-      </plugins>
-    </pluginManagement>
   </build>
 
   <scm>
