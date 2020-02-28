@@ -18,7 +18,7 @@
   <url>https://github.com/jenkinsci/jquery3-api-plugin</url>
 
   <properties>
-    <revision>3.4.1-9</revision>
+    <revision>3.4.1-10</revision>
     <changelist>-SNAPSHOT</changelist>
     <jquery.version>3.4.1</jquery.version>
 
@@ -97,9 +97,9 @@
   </build>
 
   <scm>
-    <connection>scm:git:git://github.com/jenkinsci/jquery3-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:jenkinsci/jquery3-plugin.git</developerConnection>
-    <url>https://github.com/jenkinsci/jquery3-plugin</url>
+    <connection>scm:git:git://github.com/jenkinsci/jquery3-api-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:jenkinsci/jquery3-api-plugin.git</developerConnection>
+    <url>https://github.com/jenkinsci/jquery3-api-plugin</url>
     <tag>${scmTag}</tag>
   </scm>
 
