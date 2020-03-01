@@ -7,11 +7,11 @@ image:https://img.shields.io/badge/Jenkins-2.138.4-green.svg?label=min.%20Jenkin
 image:https://img.shields.io/badge/jdk-8-yellow.svg?label=min.%20JDK[JDK8]
 image:https://img.shields.io/badge/license-MIT-yellow.svg[License: MIT, link={https://opensource.org/licenses/MIT}]
 
-Provides https://getbootstrap.com/[Bootstrap 4] for Jenkins Plugins. Bootstrap is -- according to their self-perception --
-the world’s most popular front-end component library to build responsive, mobile-first projects on the web. It is
-an open source toolkit for developing with HTML, CSS, and JS. Developers can quickly prototype their ideas or
-build entire apps with their Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins
-built on jQuery.
+Provides https://jquery.com[jQuery 3] for Jenkins Plugins.
+jQuery is -- as described on their home page -- a fast, small, and feature-rich JavaScript library. It makes things
+like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API
+that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the
+way that millions of people write JavaScript.
 
 This plugin contains the latest https://www.webjars.org[WebJars] release and corresponding Jenkins UI elements.
 
