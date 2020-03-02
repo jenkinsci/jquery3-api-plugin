@@ -14,7 +14,7 @@
   <name>JQuery3 API Plugin</name>
   <version>${revision}${changelist}</version>
 
-  <description>Jenkins plug-in that provides jQuery 3.x.</description>
+  <description>Provides jQuery 3.x for Jenkins plugins.</description>
   <url>https://github.com/jenkinsci/jquery3-api-plugin</url>
 
   <properties>
