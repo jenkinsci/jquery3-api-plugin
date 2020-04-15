@@ -20,7 +20,7 @@
   <properties>
     <revision>3.4.1-11</revision>
     <changelist>-SNAPSHOT</changelist>
-    <jquery.version>3.4.1</jquery.version>
+    <jquery.version>3.5.0</jquery.version>
 
     <module.name>${project.groupId}.jquery3</module.name>
   </properties>
