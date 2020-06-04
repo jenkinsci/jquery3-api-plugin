@@ -41,7 +41,7 @@ accessing jQuery 3.x.
  
 You can find several examples of Jenkins views that use jQuery in the
 https://github.com/jenkinsci/warnings-ng-plugin[Warnings Next Generation plugin]
-and in the https://github.com/jenkinsci/warnings-ng-plugin[Forensics plugin].
+and in the https://github.com/jenkinsci/forensics-api-plugin[Forensics plugin].
 
 image:https://ci.jenkins.io/job/Plugins/job/jquery3-api-plugin/job/master/badge/icon[Jenkins, link=https://ci.jenkins.io/job/Plugins/job/jquery3-api-plugin/job/master/]
 image:https://github.com/jenkinsci/jquery3-api-plugin/workflows/CI%20on%20all%20platforms/badge.svg?branch=master[GitHub Actions, link=https://github.com/jenkinsci/jquery3-api-plugin/actions]
