@@ -3,7 +3,7 @@
 = jQuery 3 Jenkins Plugin
 
 image:https://img.shields.io/jenkins/plugin/v/jquery3-api.svg?label=latest%20version[Jenkins Plugin, link=https://plugins.jenkins.io/jquery3-api]
-image:https://img.shields.io/badge/Jenkins-2.204.4-green.svg?label=min.%20Jenkins[Jenkins Version, link=https://jenkins.io/download/lts]
+image:https://img.shields.io/badge/Jenkins-2.249.1-green.svg?label=min.%20Jenkins[Jenkins Version, link=https://jenkins.io/download/lts]
 image:https://img.shields.io/badge/jdk-8-yellow.svg?label=min.%20JDK[JDK8]
 image:https://img.shields.io/badge/license-MIT-yellow.svg[License: MIT, link=https://opensource.org/licenses/MIT]
 
@@ -38,7 +38,7 @@ Then you can use jQuery in your jelly files using the following snippet:
 [TIP]
 Since Jenkins uses jQuery 1.x as well make sure to use the global symbol `jQuery3` rather than `$` when
 accessing jQuery 3.x.
- 
+
 You can find several examples of Jenkins views that use jQuery in the
 https://github.com/jenkinsci/warnings-ng-plugin[Warnings Next Generation plugin]
 and in the https://github.com/jenkinsci/forensics-api-plugin[Forensics plugin].
