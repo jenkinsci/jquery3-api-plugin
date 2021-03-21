@@ -18,7 +18,7 @@
   <url>https://github.com/jenkinsci/jquery3-api-plugin</url>
 
   <properties>
-    <revision>3.5.1-4</revision>
+    <revision>3.6.0-1</revision>
     <changelist>-SNAPSHOT</changelist>
     <jquery.version>3.6.0</jquery.version>
 
