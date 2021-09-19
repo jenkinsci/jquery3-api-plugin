@@ -1,6 +1,6 @@
 {
-  "name": "jquery3",
-  "version": "0.1.0",
+  "name": "jquery3-api",
+  "version": "3.6.0",
   "description": "jQuery 3 Jenkins Plugin",
   "directories": {
     "doc": "doc"
