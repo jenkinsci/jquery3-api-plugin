@@ -18,10 +18,10 @@
   <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
 
   <properties>
-    <revision>3.6.0-5</revision>
+    <revision>3.6.1-1</revision>
     <changelist>-SNAPSHOT</changelist>
     <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
-    <jquery.version>3.6.0</jquery.version>
+    <jquery.version>3.6.1</jquery.version>
 
     <module.name>${project.groupId}.jquery3</module.name>
   </properties>
