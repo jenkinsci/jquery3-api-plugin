@@ -21,7 +21,7 @@
     <revision>3.6.3-2</revision>
     <changelist>-SNAPSHOT</changelist>
     <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
-    <jquery.version>3.6.3</jquery.version>
+    <jquery.version>3.6.4</jquery.version>
 
     <module.name>${project.groupId}.jquery3</module.name>
   </properties>
