@@ -18,10 +18,9 @@
   <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
 
   <properties>
-    <revision>3.6.4-2</revision>
+    <revision>3.7.0-1</revision>
     <changelist>-SNAPSHOT</changelist>
     <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
-    <jquery.version>3.6.4</jquery.version>
 
     <module.name>${project.groupId}.jquery3</module.name>
   </properties>
@@ -41,31 +40,31 @@
     </developer>
   </developers>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>jquery</artifactId>
-      <version>${jquery.version}</version>
-      <scope>provided</scope>
-    </dependency>
-
-  </dependencies>
-
   <build>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>1.12.1</version>
         <executions>
           <execution>
-            <id>unpack-dependencies</id>
-            <phase>generate-resources</phase>
+            <id>install node and npm</id>
             <goals>
-              <goal>unpack-dependencies</goal>
+              <goal>install-node-and-npm</goal>
             </goals>
+            <phase>generate-resources</phase>
             <configuration>
-              <outputDirectory>${project.build.directory}/webjars</outputDirectory>
-              <includeArtifactIds>jquery</includeArtifactIds>
+              <nodeVersion>v14.16.1</nodeVersion>
+            </configuration>
+          </execution>
+          <execution>
+            <id>npm install</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <arguments>install</arguments>
             </configuration>
           </execution>
         </executions>
@@ -75,25 +74,27 @@
         <artifactId>maven-resources-plugin</artifactId>
         <executions>
           <execution>
-            <id>copy-resources</id>
+            <id>copy-js-resources</id>
             <phase>process-resources</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${project.build.directory}/${project.artifactId}/webjars</outputDirectory>
+              <outputDirectory>${project.build.directory}/${project.artifactId}/js</outputDirectory>
               <resources>
                 <resource>
-                  <directory>
-                    ${project.build.directory}/webjars/META-INF/resources/webjars/jquery/${jquery.version}
-                  </directory>
+                  <directory>${project.basedir}/node_modules/jquery/dist/</directory>
                   <filtering>false</filtering>
+                  <excludes>
+                    <exclude>*.slim.*</exclude>
+                  </excludes>
                 </resource>
               </resources>
             </configuration>
           </execution>
         </executions>
       </plugin>
+
     </plugins>
   </build>
 
