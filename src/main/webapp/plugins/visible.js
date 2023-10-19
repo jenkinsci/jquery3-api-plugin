@@ -15,7 +15,7 @@
     var unvisibleSet = [];
 
     function isVisible(element) {
-        return $(element).is(':visible');
+        return element.is(':visible');
     }
 
     function inUnvisibleSet(element) {
@@ -54,7 +54,7 @@
     }
 
     function sendMessage(element, msg) {
-        $(element).trigger(msg);
+        element.trigger(msg);
     }
 
     function sendTreeMessage(element, msg) {
