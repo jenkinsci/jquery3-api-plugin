@@ -2,7 +2,7 @@
 <!--
 Use it like <st:adjunct includes="io.jenkins.plugins.jquery3"/>
 -->
-<j:jelly xmlns:j="jelly:core">
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler">
 
   <j:new var="h" className="hudson.Functions" />
   ${h.initPageVariables(context)}
@@ -10,9 +10,6 @@ Use it like <st:adjunct includes="io.jenkins.plugins.jquery3"/>
   <script type="text/javascript" src="${resURL}/plugin/jquery3-api/js/jquery.min.js"/>
   <script type="text/javascript" src="${resURL}/plugin/jquery3-api/plugins/visible.js"/>
 
-  <script>
-    const jQuery3 = $;
-    jQuery3.noConflict();
-  </script>
+  <st:adjunct includes="io.jenkins.plugins.jquery3.init-constant"/>
 
 </j:jelly>
