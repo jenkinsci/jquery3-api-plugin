@@ -12,14 +12,14 @@
   <groupId>io.jenkins.plugins</groupId>
   <packaging>hpi</packaging>
   <name>JQuery3 API Plugin</name>
-  <version>${revision}${changelist}</version>
+  <version>${revision}-${changelist}</version>
 
   <description>Provides jQuery 3.x for Jenkins plugins.</description>
   <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
 
   <properties>
-    <revision>3.7.1-4</revision>
-    <changelist>-SNAPSHOT</changelist>
+    <revision>3.7.1</revision>
+    <changelist>999999-SNAPSHOT</changelist>
     <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
 
     <module.name>${project.groupId}.jquery3</module.name>
