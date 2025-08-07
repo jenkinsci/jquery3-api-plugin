@@ -1,6 +1,6 @@
 # For help see https://www.jenkins.io/redirect/continuous-delivery-of-plugins
 
-name: cd
+name: 'Jenkins CD'
 on:
   workflow_dispatch:
   check_run:
