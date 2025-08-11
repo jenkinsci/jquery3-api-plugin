@@ -40,6 +40,20 @@
     </developer>
   </developers>
 
+  <dependencies>
+    <!-- we do not need any of the API jars in the parent so override their scope -->
+    <dependency>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>commons-lang3-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>commons-text-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
   <build>
     <plugins>
       <plugin>
