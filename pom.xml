@@ -1,29 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>org.jvnet.hudson.plugins</groupId>
     <artifactId>analysis-pom</artifactId>
-    <version>12.3357.v7597b_eb_9174c</version>
+    <version>12.3362.vd97f455460a_2</version>
     <relativePath />
   </parent>
+  <groupId>io.jenkins.plugins</groupId>
 
   <artifactId>jquery3-api</artifactId>
-  <groupId>io.jenkins.plugins</groupId>
+  <version>${revision}-${changelist}</version>
   <packaging>hpi</packaging>
   <name>JQuery3 API Plugin</name>
-  <version>${revision}-${changelist}</version>
 
   <description>Provides jQuery 3.x for Jenkins plugins.</description>
   <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
-
-  <properties>
-    <revision>3.7.1</revision>
-    <changelist>999999-SNAPSHOT</changelist>
-    <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
-
-    <module.name>${project.groupId}.jquery3</module.name>
-  </properties>
 
   <licenses>
     <license>
@@ -34,11 +27,26 @@
 
   <developers>
     <developer>
-      <name>Ullrich Hafner</name>
       <id>uhafner</id>
+      <name>Ullrich Hafner</name>
       <email>ullrich.hafner@gmail.com</email>
     </developer>
   </developers>
+
+  <scm>
+    <connection>scm:git:https://github.com/${gitHubRepo}.git</connection>
+    <developerConnection>scm:git:git@github.com:${gitHubRepo}.git</developerConnection>
+    <tag>${scmTag}</tag>
+    <url>https://github.com/${gitHubRepo}</url>
+  </scm>
+
+  <properties>
+    <revision>3.7.1</revision>
+    <changelist>999999-SNAPSHOT</changelist>
+    <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
+
+    <module.name>${project.groupId}.jquery3</module.name>
+  </properties>
 
   <dependencies>
     <!-- we do not need any of the API jars in the parent so override their scope -->
@@ -53,6 +61,20 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <repositories>
+    <repository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/public/</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
 
   <build>
     <plugins>
@@ -82,10 +104,10 @@
         <executions>
           <execution>
             <id>copy-js-resources</id>
-            <phase>process-resources</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
+            <phase>process-resources</phase>
             <configuration>
               <outputDirectory>${project.build.directory}/${project.artifactId}/js</outputDirectory>
               <resources>
@@ -105,44 +127,11 @@
         <groupId>org.revapi</groupId>
         <artifactId>revapi-maven-plugin</artifactId>
         <configuration>
-          <analysisConfiguration>
-            <revapi.differences>
-              <differences>
-                <item>
-                  <ignore>true</ignore>
-                  <code>java.class.removed</code>
-                  <old>class io.jenkins.plugins.jquery3.api.JQuery3Api</old>
-                  <justification>This class was never API anyway</justification>
-                </item>
-              </differences>
-            </revapi.differences>
-          </analysisConfiguration>
+          <skip>true</skip>
         </configuration>
       </plugin>
 
     </plugins>
   </build>
 
-  <scm>
-    <connection>scm:git:https://github.com/${gitHubRepo}.git</connection>
-    <developerConnection>scm:git:git@github.com:${gitHubRepo}.git</developerConnection>
-    <url>https://github.com/${gitHubRepo}</url>
-    <tag>${scmTag}</tag>
-  </scm>
-
-  <repositories>
-    <repository>
-      <id>repo.jenkins-ci.org</id>
-      <url>https://repo.jenkins-ci.org/public/</url>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>repo.jenkins-ci.org</id>
-      <url>https://repo.jenkins-ci.org/public/</url>
-    </pluginRepository>
-  </pluginRepositories>
-
 </project>
-

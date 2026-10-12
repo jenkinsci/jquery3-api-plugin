@@ -29,5 +29,8 @@
   },
   "author": "Ullrich Hafner",
   "license": "MIT",
-  "homepage": "https://github.com/jenkinsci/jquery3-api-plugin#readme"
+  "homepage": "https://github.com/jenkinsci/jquery3-api-plugin#readme",
+  "allowScripts": {
+    "fsevents@2.3.3": true
+  }
 }
